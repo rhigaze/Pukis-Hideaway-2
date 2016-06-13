@@ -5,3 +5,6 @@ var gState = {
     currChalId: 'game1'
 };
 
+function chalFinished(chalId) {
+    alert('challenge'+ chalId +'finished');
+}
