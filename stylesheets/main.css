@@ -6231,6 +6231,10 @@ footer {
   text-align: center;
   color: #777; }
 
+canvas {
+  margin: 30px auto;
+  display: block; }
+
 body {
   background-color: #222;
   color: white; }
