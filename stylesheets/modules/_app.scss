@@ -1,11 +1,4 @@
-@media(max-width:767px){
-  header {
-    text-align: center;
-    img {
-      margin:auto;
-    }  
-  }
-}
+@media(max-width:767px){}
 @media(min-width:768px){}
 @media(min-width:992px){}
 @media(min-width:1200px){}
@@ -15,6 +8,7 @@ header {
   display:flex;
   flex-flow: row wrap;
   background-color: indigo;
+  text-align: center;
   padding:10px;
   h1 {
     color:gold;
@@ -25,6 +19,16 @@ footer {
   background-color: black;
   text-align: center;
   color: #777;
+}
+
+.locked {
+  pointer-events: none;
+  cursor: default;
+  img {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 @import 'game1';
