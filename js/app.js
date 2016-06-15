@@ -14,7 +14,3 @@ if (!gState) {
 localStorage.setItem('gState', JSON.stringify(gState));
 
 // console.log('gState:', gState);
-
-function chalFinished(chalId) {
-    alert('challenge'+ chalId +'finished');
-}

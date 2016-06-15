@@ -22,7 +22,12 @@ var gChals = [
     }
 ];
 
-function getChals() {}
+function getChals() {
+    var chals = JSON.parse(localStorage.getItem('gState')).chals;
+    if (!chals) chals = gChals;
+    return chals;
+}
+
 function getChalById(chalId) {}
 function getCurrChal() {
     var gState = localStorage.getItem('gState');
@@ -32,5 +37,11 @@ function getCurrChal() {
 
     return currChal;
 }
+
 function renderChals() {}
-function reportSolved(chalId){}
+
+function reportSolved(chalId){
+    var state = JSON.parse(localStorage.getItem('gState'));
+    state.chals[chalId].isSolved = true;
+    localStorage.setItem('gState', JSON.stringify(state));
+}

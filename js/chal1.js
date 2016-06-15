@@ -37,7 +37,8 @@ var gQuests = [
     },
 ]
 
-// var gState = JSON.parse(localStorage.getItem('gState'));
+var LEVEL = JSON.parse(localStorage.getItem('gState')).level;
+console.log('LEVEL: ', LEVEL);
 
 function renderChal1() {
     var quest = getQuest();
@@ -47,9 +48,8 @@ function renderChal1() {
     var elOptions = document.querySelector('.options');
 
     var strHtml = '';
-    var LEVEL = 4;   // TODO: change '4' to difficulty level
-
-    for (var i = 0; i < LEVEL; i++) {
+    
+    for (var i = 0; i < (LEVEL+1); i++) {
         strHtml += '<div class="row">';
         strHtml += '<div class="col-xs-12 btn btn-success option" onclick="checkAnswer(this)">'
         strHtml += quest.options[i];
@@ -73,6 +73,7 @@ function checkAnswer(elButton) {
         quest.isAnswered = true;
         if (getQuest()) renderChal1();
         else {
+            reportSolved(0);
             alert('Challenge finished!');
             window.location.assign('index.html');
         }
