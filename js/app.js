@@ -1,7 +1,10 @@
 'use strict';
 
 var gState = {
-    playerName: 'Muki',
-    currChalId: 'game1'
+    currChal: 0,
+    level: 'easy'  
 };
 
+function chalFinished(chalId) {
+    alert('challenge'+ chalId +'finished');
+}
