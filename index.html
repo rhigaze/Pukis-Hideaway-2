@@ -4,16 +4,33 @@
   <meta charset="utf-8">
   <title>Pukis hideaway</title>
   <link rel="stylesheet" href="stylesheets/main.css"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta name="viewport"  content="width=device-width,height=device-height initial-scale=1 maximum-scale=1 user-scalable=no">
 </head>
 <body>
-<header class="page-header">
+<header class="header">
 	<div class="container">
     <h1>Welcome to Puki's hideaway!</h1>
   </div>
 </header>
 <div class="body">
 <main>
+ 
+  <div id="level" class=" center-align"> 
+    <input type="radio" name="level" id="1" value="1" onclick="updateCheck()" checked />
+    <label for="1">Easy</label>
+
+    <input type="radio" name="level" id="2" value="2" onclick="updateCheck()" />
+    <label for="2">Medium</label>
+
+    <input type="radio" name="level" id="3" value="3" onclick="updateCheck()" />
+    <label for="3">Difficult</label>  
+  </div>
+  <script>
+    function updateCheck(){
+      var level =document.querySelector('input[name="level"]:checked').value; 
+    }  
+    </script>
   <div class="container">
     <div class="row">
       <h2>Play one challenge at a time to find Puki!</h2>
@@ -40,19 +57,13 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <a href="chaleng2.html">ch 2</a>
-=======
+ 
   </div>
 </main>
->>>>>>> d70e55f513ce93d75cfdef00d8c8f0881f48e023
-    
-
 </div>
 <footer class="footer">
   cofferights &copy; 2016  
 </footer>
-
   <script src="lib/jquery/jquery.js"></script>
   <script src="js/app.js"></script>
  
