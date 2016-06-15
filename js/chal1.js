@@ -25,11 +25,11 @@ var gQuests = [
     },
     {
         id: 3,
-        picture: '../img/chal/3.jpg',
+        picture: '../img/chal1/3.jpg',
         options:    [
             'The infant is playing',
-            'The elephant is taking a shower',
-            'The elephant is throwing a ball',
+            'The elephant is bathing',
+            'The elephant is asleep',
             'The water is smiling'
                     ],
         answerIndex: 1,
@@ -39,16 +39,19 @@ var gQuests = [
 
 // var gState = JSON.parse(localStorage.getItem('gState'));
 
-function renderChal1(quest) {
+function renderChal1() {
+    var quest = getQuest();
     var elQuestImg = document.querySelector('img');
     elQuestImg.src = quest.picture;
 
     var elOptions = document.querySelector('.options');
 
     var strHtml = '';
-    for (var i = 0; i < 4; i++) {
+    var LEVEL = 4;   // TODO: change '4' to difficulty level
+
+    for (var i = 0; i < LEVEL; i++) {
         strHtml += '<div class="row">';
-        strHtml += '<div class="col-xs-12 btn btn-success option">'
+        strHtml += '<div class="col-xs-12 btn btn-success option" onclick="checkAnswer(this)">'
         strHtml += quest.options[i];
         strHtml += '</div></div>';
     }
@@ -62,4 +65,19 @@ function getQuest() {
     })[0];
     
     return quest;
+}
+
+function checkAnswer(elButton) {
+    var quest = getQuest();
+    if (elButton.innerText === quest.options[quest.answerIndex]) {
+        quest.isAnswered = true;
+        if (getQuest()) renderChal1();
+        else {
+            alert('Challenge finished!');
+            window.location.assign('index.html');
+        }
+    } else {
+        elButton.classList.remove('btn-success');
+        elButton.classList.add('btn-danger');
+    }
 }
