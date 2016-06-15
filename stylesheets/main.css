@@ -6235,15 +6235,25 @@ footer {
   pointer-events: none;
   cursor: default; }
 
+.row {
+  text-align: center; }
+
+.chal1 .row {
+  padding: 5px; }
+
+.chal1 .row .btn {
+  font-size: 2em; }
+
 body {
+  height: 100vh;
   background-color: #222;
   color: white; }
 
 .challenge img {
   border-radius: 50%;
-  background: red;
   max-width: 100%;
   max-height: auto; }
 
 .challenge {
-  outline: solid 1px white; }
+  outline: solid 1px white;
+  padding: 5px; }

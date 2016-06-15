@@ -3,6 +3,7 @@
 
 
 body {
+  height: 100vh;
   background-color: #222;
   color:white;
 }
@@ -10,12 +11,12 @@ body {
 .challenge img {
   // display: inline-block;
   border-radius: 50%;
-  background: red;
-  max-width:100%;
-  max-height:auto;
+  max-width: 100%;
+  max-height: auto;
   // object-fit: contain;
 }
 
 .challenge{
   outline: solid 1px white;
+  padding: 5px;
 }

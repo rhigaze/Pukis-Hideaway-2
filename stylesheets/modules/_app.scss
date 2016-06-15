@@ -31,5 +31,9 @@ footer {
   }
 }
 
-@import 'game1';
-@import 'game2';
+.row {
+  text-align: center;
+}
+
+@import 'chal1';
+@import 'chal2';
