@@ -1,3 +1,16 @@
-.game2 {
+.chal2 {
     
+   table td{
+        padding: 5px;
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        border: 2px inset #EEE ;
+    }
+    td.odd{
+        background: #9FF;
+    }
+    td.even{
+        background: #FBA;
+    }
 }
