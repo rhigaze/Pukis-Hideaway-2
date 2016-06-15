@@ -5,7 +5,7 @@
   <title>Pukis hideaway</title>
   <link rel="stylesheet" href="stylesheets/main.css"/>
 
-  <meta name="viewport"  content="width=device-width,height=device-height initial-scale=1 maximum-scale=1 user-scalable=no">
+  <meta name="viewport"  content="width=device-width height=device-height initial-scale=1 maximum-scale=1 user-scalable=no">
 </head>
 <body>
 <header class="header">
@@ -17,20 +17,15 @@
 <main>
  
   <div id="level" class=" center-align"> 
-    <input type="radio" name="level" id="1" value="1" onclick="updateCheck()" checked />
+    <input type="radio" name="level" id="1" value="1" onclick="updateLevel()" checked />
     <label for="1">Easy</label>
 
-    <input type="radio" name="level" id="2" value="2" onclick="updateCheck()" />
+    <input type="radio" name="level" id="2" value="2" onclick="updateLevel()" />
     <label for="2">Medium</label>
 
-    <input type="radio" name="level" id="3" value="3" onclick="updateCheck()" />
+    <input type="radio" name="level" id="3" value="3" onclick="updateLevel()" />
     <label for="3">Difficult</label>  
   </div>
-  <script>
-    function updateCheck(){
-      var level =document.querySelector('input[name="level"]:checked').value; 
-    }  
-    </script>
   <div class="container">
     <div class="row">
       <h2>Play one challenge at a time to find Puki!</h2>

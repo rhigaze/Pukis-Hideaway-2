@@ -23,8 +23,11 @@ var gChals = [
 ];
 
 function getChals() {
-    var chals = JSON.parse(localStorage.getItem('gState')).chals;
-    if (!chals) chals = gChals;
+    var chals;
+    var state = JSON.parse(localStorage.getItem('gState'));
+    if (!state) chals = gChals;
+    else chals = state.chals;
+    
     return chals;
 }
 

@@ -37,7 +37,7 @@ var gQuests = [
     },
 ]
 
-var LEVEL = JSON.parse(localStorage.getItem('gState')).level;
+var LEVEL = +JSON.parse(localStorage.getItem('gState')).level;
 console.log('LEVEL: ', LEVEL);
 
 function renderChal1() {
