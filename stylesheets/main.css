@@ -6245,3 +6245,22 @@ body {
   background: red;
   max-width: 100%;
   max-height: auto; }
+
+odd {
+  background: #FAA; }
+
+.even {
+  background: #AFF; }
+
+body {
+  background-color: #222;
+  color: white; }
+
+.challenge img {
+  border-radius: 50%;
+  background: red;
+  max-width: 100%;
+  max-height: auto; }
+
+.challenge {
+  outline: solid 1px white; }
