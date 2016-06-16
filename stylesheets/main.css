@@ -6307,11 +6307,11 @@ body {
   background-color: #222;
   color: white; }
 
-.challenge img {
+.chal img {
   border-radius: 50%;
   max-width: 100%;
   max-height: auto; }
 
-.challenge {
+.chal {
   outline: solid 1px white;
   padding: 5px; }
