@@ -6212,12 +6212,12 @@ button.close {
     display: none !important; } }
 
 html, body {
-  height: 100vw; }
+  height: 100vh; }
 
 header {
   display: flex;
   flex-flow: row wrap;
-  background-color: indigo;
+  background-color: seagreen;
   text-align: center;
   padding: 5px; }
 

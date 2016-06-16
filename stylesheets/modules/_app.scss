@@ -3,12 +3,13 @@
 @media(min-width:992px){}
 @media(min-width:1200px){}
 html , body {
-  height: 100vw;
+  height: 100vh;
 }
 header {
   display:flex;
   flex-flow: row wrap;
-  background-color: indigo;
+  // background-color: indigo;
+  background-color: seagreen;
   text-align: center;
   padding:5px;
   h1 {
@@ -38,52 +39,53 @@ footer {
 
 @import 'chal1';
 @import 'chal2';
+@import 'chal3';
+@import 'chal4';
 
 #level{   
   
  display: inline-flex;
- .transition{
-  transition: all .3s ease-out;
-}
-.heading{
-  text-align: center;
-  font-size:0.8em;
-  
-}
-.center-align{
-  width: 300px;
-  height: 80px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  display: table;
-  margin-top: -40px;
-  margin-left: -150px;
-}
+  .transition{
+    transition: all .3s ease-out;
+  }
+  .heading{
+    text-align: center;
+    font-size:0.8em;
+    
+  }
+  .center-align{
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: table;
+    margin-top: -40px;
+    margin-left: -150px;
+  }
 
-input[type="radio"]{
-  visibility: hidden;
-  height: 0;
-  width: 0;
-}
+  input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
 
-label {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  background-color: #454545;
-  color: white;
-  padding: 0px 10px;
-  border-radius: 3px;
-  margin: 10px 20px;
-  height: 30px;
-  min-width: 60px;
-  font-size: 20px;
-}
-input[type="radio"]:checked + label{
-  background-color: #58ba83;
-}
+  label {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: #454545;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 3px;
+    margin: 10px 20px;
+    height: 30px;
+    min-width: 60px;
+    font-size: 20px;
+  }
 
-
+  input[type="radio"]:checked + label{
+    background-color: #58ba83;
+  }
 }
