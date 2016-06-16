@@ -1,52 +1,56 @@
 var gQuests = [
     {
-        id: 1,
-        picture: '../img/chal1/1.png',
+        id: 'quest1',
         options:    [
             'Ugi is holding a cookie',
             'Ugi is eating a cat',
             'Ugi is calling 911',
             'Ugi is watching a movie'
                     ],
-        answerIndex: 0,
+        correctAnswerIndex: 0,
         isAnswered: false
     },
     {
-        id: 2,
-        picture: '../img/chal1/2.jpg',
+        id: 'quest2',
         options:    [
             'The cat is yawning',
             'The duck is picking flowers',
             'The duck is dancing',
             'The dart is flying'
                     ],
-        answerIndex: 1,
+        correctAnswerIndex: 1,
         isAnswered: false
     },
     {
-        id: 3,
-        picture: '../img/chal1/3.jpg',
+        id: 'quest3',
         options:    [
             'The infant is playing',
             'The elephant is bathing',
             'The elephant is asleep',
             'The water is smiling'
                     ],
-        answerIndex: 1,
+        correctAnswerIndex: 1,
         isAnswered: false
     },
 ]
 
-var LEVEL = +JSON.parse(localStorage.getItem('gState')).level;
-console.log('LEVEL: ', LEVEL);
+var LEVEL = +getState().level;
+
+function getQuest() {
+    // gets the first question that is not answered
+    var quest = gQuests.filter(function (quest) {
+        return (!quest.isAnswered)
+    })[0];
+    
+    return quest;
+}
 
 function renderChal1() {
     var quest = getQuest();
     var elQuestImg = document.querySelector('img');
-    elQuestImg.src = quest.picture;
+    elQuestImg.src = '/img/chal1/'+ quest.id +'.jpg';
 
     var elOptions = document.querySelector('.options');
-
     var strHtml = '';
     
     for (var i = 0; i < (LEVEL+1); i++) {
@@ -58,22 +62,13 @@ function renderChal1() {
     elOptions.innerHTML = strHtml;
 }
 
-function getQuest() {
-    // gets the first question that is not answered
-    var quest = gQuests.filter(function (quest) {
-        return (!quest.isAnswered)
-    })[0];
-    
-    return quest;
-}
-
 function checkAnswer(elButton) {
     var quest = getQuest();
-    if (elButton.innerText === quest.options[quest.answerIndex]) {
+    if (elButton.innerText === quest.options[quest.correctAnswerIndex]) {
         quest.isAnswered = true;
         if (getQuest()) renderChal1();
         else {
-            reportSolved(0);
+            reportSolved('chal1');
             alert('Challenge finished!');
             window.location.assign('index.html');
         }
