@@ -1,0 +1,87 @@
+@media(max-width:767px){}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+header {
+  display:flex;
+  flex-flow: row wrap;
+  background-color: indigo;
+  text-align: center;
+  padding:5px;
+  h1 {
+    color:gold;
+  }
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: #777;
+}
+
+.locked {
+  pointer-events: none;
+  cursor: default;
+  img {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.row {
+  text-align: center;
+}
+
+@import 'chal1';
+@import 'chal2';
+
+#level{   
+  
+ display: inline-flex;
+ .transition{
+  transition: all .3s ease-out;
+}
+.heading{
+  text-align: center;
+  font-size:0.8em;
+  
+}
+.center-align{
+  width: 300px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: table;
+  margin-top: -40px;
+  margin-left: -150px;
+}
+
+input[type="radio"]{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+label {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  background-color: #454545;
+  color: white;
+  padding: 0px 10px;
+  border-radius: 3px;
+  margin: 10px 20px;
+  height: 30px;
+  min-width: 60px;
+  font-size: 20px;
+}
+input[type="radio"]:checked + label{
+  background-color: #58ba83;
+}
+
+
+}

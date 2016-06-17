@@ -1,0 +1,22 @@
+@import "../lib/lib";
+@import "modules/app";
+
+
+body {
+  height: 100vh;
+  background-color: #222;
+  color:white;
+}
+
+.chal img {
+  // display: inline-block;
+  border-radius: 50%;
+  max-width: 100%;
+  max-height: auto;
+  // object-fit: contain;
+}
+
+.chal{
+  outline: solid 1px white;
+  padding: 5px;
+}

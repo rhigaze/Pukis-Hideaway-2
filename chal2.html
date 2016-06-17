@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challange no. 1</title>
+    <link rel="stylesheet" href="stylesheets/main.css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style> #a{width: 20px; height:20px; background: red; }</style>
+    <script type="text/javascript">
+    </script>
+</head>
+<body style="cursor: auto;" class="chal2">
+    <!--<header class="box">
+        <h1>What's in the picture?</h1>
+    </header>
+    <main>
+        <button onclick="chalFinished(2)">challenge done!</button>
+    </main>-->
+    <div class="chartType">
+        <button type="button" onclick="getChartType(0)">0 - 99</button>  
+        <button type="button" onclick="getChartType(1)">1 - 100</button>  
+    </div>
+    <div class="board" style="display : none">  
+        <table id="tableGame" border="1">
+        </table>
+        
+            <table class="answer"border="1" id="answer">
+                <tr>
+                </tr>
+            </table>
+    </div>
+    <div id="a" ></div>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+    <script src="js/chal2.js"></script>
+</body>
+</html>
