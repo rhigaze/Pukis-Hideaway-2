@@ -1,8 +1,44 @@
 .chal4 {
-    .frame {
-        height: 50vh;
-        width: 100vw;
-        background-image: url(../img/chal4/forest.jpg);
 
+    main {
+        position: relative;
+        top: 0;
+        left: 0;
     }
+
+    .frame {
+        position: relative;
+        // outline: solid 1px white;
+        top: 0;
+        left: 0;
+        img {
+            width: 100%;
+            margin: auto;
+        }
+    }
+    .instruction {
+        // outline: solid 1px white;
+        position: absolute;
+        margin: auto;
+        top: 10%;
+        font-family: Cochin;
+        font-size: 4rem;
+        color: yellow;
+    }
+
+    .fox {
+        position: absolute;
+        height: auto;
+
+        :hover {
+            animation-name: roll;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+        }
+        @keyframes roll {
+            100% {transform: rotate(360deg);}
+        }
+        
+    }
+    
 }

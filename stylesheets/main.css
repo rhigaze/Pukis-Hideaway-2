@@ -6260,6 +6260,41 @@ footer {
 .chal2 td.even {
   background: #FBA; }
 
+.chal4 main {
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.chal4 .frame {
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.chal4 .frame img {
+  width: 100%;
+  margin: auto; }
+
+.chal4 .instruction {
+  position: absolute;
+  margin: auto;
+  top: 10%;
+  font-family: Cochin;
+  font-size: 4rem;
+  color: yellow; }
+
+.chal4 .fox {
+  position: absolute;
+  height: auto; }
+
+.chal4 .fox :hover {
+  animation-name: roll;
+  animation-duration: 0.5s;
+  animation-timing-function: linear; }
+
+@keyframes roll {
+  100% {
+    transform: rotate(360deg); } }
+
 #level {
   display: inline-flex; }
 
