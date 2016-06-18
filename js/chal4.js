@@ -37,3 +37,18 @@ function renderFoxes() {
     }).join('');
     elFrame.innerHTML += strHTML;
 }
+
+function checkAnswer(elButton) {
+    var userAns = +elButton.innerText;
+    var correctAns = document.querySelectorAll('.fox').length;
+
+    if (userAns === correctAns) {
+        reportSolved('chal4');
+        alert('Challenge finished!');
+        window.location.assign('index.html');
+
+    } else {
+        elButton.classList.remove('btn-success');
+        elButton.classList.add('btn-danger');
+    }
+}
