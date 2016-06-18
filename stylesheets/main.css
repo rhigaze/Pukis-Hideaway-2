@@ -6247,18 +6247,32 @@ footer {
 .chal1 .row .btn {
   font-size: 2em; }
 
+.chal2 table {
+  margin: 20px auto; }
+
 .chal2 table td {
   padding: 5px;
   font-size: 14px;
-  width: 30px;
-  height: 30px;
-  border: 2px inset #EEE; }
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  border: 4px inset #EEE; }
 
 .chal2 td.odd {
   background: #9FF; }
 
 .chal2 td.even {
   background: #FBA; }
+
+.chal2 #answer td {
+  width: 30px;
+  height: 30px;
+  border: 3px double white;
+  color: white;
+  background: #333; }
 
 .chal4 main {
   position: relative;

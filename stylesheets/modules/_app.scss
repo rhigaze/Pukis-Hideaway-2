@@ -2,6 +2,7 @@
 @media(min-width:768px){}
 @media(min-width:992px){}
 @media(min-width:1200px){}
+
 html , body {
   height: 100vh;
 }
@@ -42,9 +43,9 @@ footer {
 @import 'chal3';
 @import 'chal4';
 
-#level{   
+#level{
   
- display: inline-flex;
+  display: inline-flex;
   .transition{
     transition: all .3s ease-out;
   }
