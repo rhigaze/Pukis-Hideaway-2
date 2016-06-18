@@ -28,9 +28,27 @@ var gFoxes = [
     }
 ]
 
+
+function getFoxes() {
+    var foxNum = getRandomIntInclusive(2,5);
+    console.log('foxNum:', foxNum);
+    var foxes = [];
+    for (var i = 0; i < foxNum; i++) {
+
+        var num = getRandomIntInclusive(0,foxNum-1);
+        while (foxes.indexOf(gFoxes[num]) > -1) {
+            num = getRandomIntInclusive(0,foxNum-1);
+        }
+        foxes.push(gFoxes[num]);
+        console.log('gFoxes[num]:', gFoxes[num]);
+    }
+    console.log('foxes: ', foxes);
+    return foxes;
+}
+
 function renderFoxes() {
     var elFrame = document.querySelector('.frame');
-    var strHTML = gFoxes.map(function (fox) {
+    var strHTML = getFoxes().map(function (fox) {
         return  '<div class="fox '+ fox.id +'" style="'+
                 'bottom: '+ fox.pos[0] +'%; left: '+ fox.pos[1] +'%; width: '+ fox.size +'%">' +
                 '<img src="img/chal4/fox.png" alt="fox"></div>';

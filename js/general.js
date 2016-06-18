@@ -45,22 +45,3 @@ function getFromStorage(key) {
   var str = localStorage.getItem(key);
   return JSON.parse(str);
 } 
-
-function getCellType(cell) {
-  var cellType;
-      switch (cell) {
-        case WALL:
-          cellType = 'wall';
-          break;
-        case PACMAN:
-          cellType = 'pacman';
-          break;
-        case GHOST:
-          cellType = 'ghost';
-          break;
-        case FOOD:
-          cellType = 'food';
-          break;
-      }
-      return cellType;
-}
