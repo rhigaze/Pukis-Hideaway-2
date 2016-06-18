@@ -6271,6 +6271,49 @@ footer {
   color: white;
   background: #333; }
 
+.chal3 .board {
+  padding: 10px; }
+
+.chal3 table {
+  align-items: center;
+  margin: 0 auto; }
+
+.chal3 table.board td {
+  height: 70px;
+  width: 70px; }
+
+.chal3 .quest {
+  background: gray;
+  box-shadow: inset 1px 1px 3px 4px #666;
+  border: 1px double #333;
+  color: #FFE;
+  font-size: 16px;
+  text-align: center; }
+
+.chal3 td.answer {
+  height: 40px;
+  width: 40px;
+  background: indianred;
+  box-shadow: inset 1px 1px 3px 4px #666;
+  border: 3px double #333;
+  color: #FFE;
+  font-size: 16px;
+  text-align: center; }
+
+.chal3 table.answer {
+  display: flex;
+  flex-flow: column wrap; }
+
+.chal3 td.drag {
+  height: 70px;
+  width: 70px;
+  background: indianred;
+  box-shadow: inset 1px 1px 3px 4px #666;
+  border: 3px double #333;
+  color: #FFE;
+  font-size: 16px;
+  text-align: center; }
+
 #level {
   display: inline-flex; }
 

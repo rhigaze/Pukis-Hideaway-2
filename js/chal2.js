@@ -28,11 +28,9 @@ function buidBoard(chartType) {
     return arrayBoard;
 }
  function drop() {
-        alert("sssss");
         $("[data-row='1'][data-colm='3']" ).droppable({
         
         drop: function( event, ui ) {
-                alert("---");
             $( this )   
             .addClass( "ui-state-highlight" )
                 .html( "Dropped!" );
@@ -59,8 +57,6 @@ function renderRow(row , board) {
         elTd.setAttribute('data-row', row);
         elTd.setAttribute('data-colm', i);
         // elTd.setAttribute('onclick', 'f(this)');
-       
-        
         elRow.appendChild(elTd);
     }
     document.querySelector('#tableGame').appendChild(elRow);
@@ -84,8 +80,6 @@ function randCell(row) {
 }
 function renderAnswers(answers) {
     var tblAnswer = document.querySelector('#answer');
-     
-    
     for(var i = 0; i < answers.length ;i++){
         var a =answers[i].cloneNode(true);
         a.style.visibility = 'visible';
@@ -94,7 +88,6 @@ function renderAnswers(answers) {
 }
 
 function userTurn() {
-    // alert('---');
     var flag = false;
     setTimeout(function () {
         flag = true;
