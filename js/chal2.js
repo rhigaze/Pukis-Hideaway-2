@@ -13,7 +13,7 @@ function getChartType(type) {
     chartType = type;   
     document.querySelector('.chartType').style.display = 'none';   
     initGame();
-    drop();
+    addDragToAns();
 }
 function buildBoard(chartType) {
     var arrayBoard = [];
@@ -25,21 +25,29 @@ function buildBoard(chartType) {
             arrayBoard[i][j] = i*10 + j;
         }
     }
-    console.table(arrayBoard);
+    
     return arrayBoard;
 }
     
- function drop() {
-        $("[data-row='1'][data-colm='3']" ).droppable({
+ function  addDragToAns() {
+        $( "#answer td" ).draggable({opacity : .7 , revert:'invalid'});
+  }
+ function drgeAnsw(answCell){
+     console.log('==========');
+     
+     var row = answCell.getAttribute('data-row');
+     var colm = answCell.getAttribute('data-colm');
+      $("#tableGame [data-row='"+row+"'][data-colm='"+colm+"']" ).droppable({
         
         drop: function( event, ui ) {
-            $( this )   
-            .addClass( "ui-state-highlight" )
-                .html( "Dropped!" );
+            var x =$("#tableGame [data-row='"+row+"'][data-colm='"+colm+"']" ); 
+            console.log(x.innerHTML) 
+             x.attr('style', 'visibility : "visible"')
+             var ans = $(answCell);
+             ans.attr('style', 'visibility : "hidden"') 
         }
         });
-        $( "#answer td" ).draggable();
-  }
+ }
     
 function startGame(board) {
     var gameBoard = board;
@@ -77,7 +85,7 @@ function playRow(row) {
     var arryMissNum = [];
     arryMissNum.push(randCell(row)); 
     arryMissNum.push(randCell(row));
-    renderAnswers(arryMissNum);
+       renderAnswers(arryMissNum);
     if(userTurn()) return true; 
 }
 function randCell(row) {
@@ -95,7 +103,8 @@ function renderAnswers(answers) {
     for(var i = 0; i < answers.length ;i++){
         var a =answers[i].cloneNode(true);
         a.style.visibility = 'visible';
-          tblAnswer.appendChild(a);
+        a.setAttribute('onclick' , 'drgeAnsw(this)');
+        tblAnswer.appendChild(a);
     }
 }
 
